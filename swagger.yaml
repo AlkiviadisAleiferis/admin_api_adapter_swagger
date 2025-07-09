@@ -133,7 +133,7 @@ paths:
 
 # Base info paths
   /base_info/:
-    post:
+    get:
       tags:
         - "Base info"
       summary: Retrieve base site info.
@@ -1048,6 +1048,11 @@ components:
     BaseInfoResponse:
       type: object
       properties:
+        apps:
+          example: ["app_name_1", "app_name_2"]
+          type: array
+          items:
+            type: string
         entities:
           type: object
           properties:
